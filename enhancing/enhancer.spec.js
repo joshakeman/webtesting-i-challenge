@@ -54,4 +54,14 @@ describe('enhancer.js', () => {
             })).toEqual({ name: 'item1', durability: 85, enhancement: 18 })
         })
     })
+
+    describe('get() method', () => {
+            it('put enhancement level before name of item', () => {
+                expect(enhancer.get({
+                name: 'Sword',
+                durability: 43,
+                enhancement: 12
+            })).toEqual({ name: '[+12] Sword', durability: 43, enhancement: 12 })
+        })
+    })
 })
