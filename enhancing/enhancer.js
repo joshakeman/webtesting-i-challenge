@@ -6,6 +6,7 @@ module.exports = {
 };
 
 function succeed(item) {
+  item.durability = 100
   return { ...item };
 }
 
